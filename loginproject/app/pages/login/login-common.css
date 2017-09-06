@@ -1,0 +1,36 @@
+
+StackLayout{
+    background-color: white;
+}
+.top{
+    background-color: white;
+}
+.center{
+    margin: auto;
+}
+.bottom{
+    vertical-align: bottom;
+}
+
+
+  Image {
+    margin-top: 50;
+    margin-bottom: 20;
+  }
+
+  .signUpBtn {
+    margin-top: 50;
+    margin-bottom: 20;
+  }
+
+  .loginBtn{
+      height: 20;
+      background-color: blue;
+  }
+
+  TextField{
+    border-bottom-width: 1px solid;
+    border-color: black;
+    margin-left: 20;
+    margin-right: 20;
+  }

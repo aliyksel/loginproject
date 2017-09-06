@@ -1,0 +1,9 @@
+.vscode
+.idea
+.DS_Store
+*.js
+*.js.map
+*.log
+app/*.d.ts
+platforms
+node_modules

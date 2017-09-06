@@ -1,0 +1,15 @@
+
+    <StackLayout   >
+            <TextField hint="User Name"  [(ngModel)]="user.userName"
+            autocorrect="false" autocapitalizationType="none"  ></TextField>
+            <TextField hint="password"  [(ngModel)]="user.password"
+            autocorrect="false" autocapitalizationType="none"  ></TextField>
+            <TextField hint="e-mail"  [(ngModel)]="user.email"
+            autocorrect="false" autocapitalizationType="none"  ></TextField>
+            <TextField hint="Given Name"  [(ngModel)]="user.givenName"
+            autocorrect="false" autocapitalizationType="none"  ></TextField>
+            <TextField hint="Last Name"  [(ngModel)]="user.lastName"
+            autocorrect="false" autocapitalizationType="none"  ></TextField>
+        <Button  text="Sign UP" (tap)="signUp()" automationText="signUpBtn" class=loginBtn></Button>  
+    </StackLayout>
+    

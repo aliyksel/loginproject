@@ -1,0 +1,15 @@
+
+<FlexboxLayout  flexDirection="column"  >
+    <StackLayout   class=top flexGrow="2">
+    <Image  src="res://logo" stretch="none" horizontalAlignment="center"></Image>
+    </StackLayout  >
+    <FlexboxLayout  flexGrow="4" flexDirection="column"  alignContent="center">
+      <TextField hint="User Name"  [(ngModel)]="user.userName"
+        autocorrect="false" autocapitalizationType="none"  ></TextField>
+      <TextField hint="Password" secure="true" [(ngModel)]="user.password"  ></TextField>
+
+      <Button text="Sign Up Now"  [nsRouterLink]="['/signup']"   class=signUpBtn></Button>
+      <Button text="Forget Password"  (tap)="forgetPassword()"  class=signUpBtn></Button>
+    </FlexboxLayout> 
+    <Button  flexGrow="1" text="Log In" (tap)="signIn()"  class=loginBtn></Button>  
+</FlexboxLayout>
