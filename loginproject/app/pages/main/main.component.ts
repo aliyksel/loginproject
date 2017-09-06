@@ -29,7 +29,6 @@ export class MainComponent implements OnInit  {
   }
 
   signOut(){   
-     this.user = null;
      this.nav.backToPreviousPage();
   }
 }

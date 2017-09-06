@@ -28,7 +28,9 @@ export class SignupComponent {
     if(! MainComponent.userMap){
       MainComponent.userMap = new Map<string,User>();
     }
-    MainComponent.userMap.set(this.user.userName,this.user);
+    if(this.user && this.user.userName){
+       MainComponent.userMap.set(this.user.userName,this.user);
+    }
     this.nav.backToPreviousPage();
   }
 
