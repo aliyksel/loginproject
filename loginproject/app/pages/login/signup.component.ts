@@ -14,14 +14,13 @@ import {Page} from "ui/page";
 export class SignupComponent {
 
   user: User;
+  showVerify:boolean = false;
+  enableSignUp :boolean= true;
+  verificationCode:string;
 
   constructor(private nav: RouterExtensions, page:Page  ) {
     this.user = new User();
     page.actionBarHidden = true;
-  }
-  
-  submit(){
-    this.nav.navigate(["/login"]);
   }
 
   signUp(){
@@ -31,9 +30,12 @@ export class SignupComponent {
     if(this.user && this.user.userName){
        MainComponent.userMap.set(this.user.userName,this.user);
     }
-    this.nav.backToPreviousPage();
+    this.showVerify = true;
+    this.enableSignUp = false;
   }
 
-
-
+  verify(){
+    alert(this.verificationCode);
+    this.nav.backToPreviousPage();
+  }
 }

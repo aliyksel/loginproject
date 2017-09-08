@@ -10,6 +10,9 @@
             autocorrect="false" autocapitalizationType="none"  ></TextField>
             <TextField hint="Last Name"  [(ngModel)]="user.lastName"
             autocorrect="false" autocapitalizationType="none"  ></TextField>
-        <Button  text="Sign UP" (tap)="signUp()" automationText="signUpBtn" class=loginBtn></Button>  
+        <Button  text="Sign UP" (tap)="signUp()"  class=loginBtn  isEnabled="{{enableSignUp}}"></Button>  
+        <TextField hint="verification Code"  [(ngModel)]="verificationCode"
+        autocorrect="false" autocapitalizationType="none" *ngIf="showVerify" ></TextField>
+        <Button  text="Verify" (tap)="verify()" class=loginBtn *ngIf="showVerify"></Button>  
     </StackLayout>
     
