@@ -9,7 +9,7 @@ import {AwsCognito, CognitoCommonDelegate} from "nativescript-aws-cognito";
 @Component({
     selector: "ns-signup",
     templateUrl: "pages/login/signup.component.html",
-    styleUrls: ["pages/login/login-common.css"]
+    styleUrls: ["pages/login/login.css"]
 })
 
 export class SignupComponent implements CognitoCommonDelegate{

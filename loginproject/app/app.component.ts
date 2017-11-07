@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
          var cognitoIdentityInteractiveAuthenticationDelegateImpl:CognitoIdentityInteractiveAuthenticationDelegateImpl;
          cognitoIdentityInteractiveAuthenticationDelegateImpl = new CognitoIdentityInteractiveAuthenticationDelegateImpl(this.nav);
 
+         // you must enter your values.
         AwsCognito.createUserPool("", "", "", "", cognitoIdentityInteractiveAuthenticationDelegateImpl);
     }
  }

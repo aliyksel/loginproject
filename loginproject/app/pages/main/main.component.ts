@@ -27,13 +27,15 @@ export class MainComponent implements OnInit, CognitoCommonDelegate{
     },null);
   }
 
+
+
   ngOnInit(){
 
      //var userName: string;
      //this.router.params.subscribe(params => userName = params['userName']);
      //this.user = MainComponent.userMap.get(userName);
      console.log("onInit");
-     //AwsCognito.getUserDetail(this);
+     AwsCognito.getUserDetail(this);
      
   }
 

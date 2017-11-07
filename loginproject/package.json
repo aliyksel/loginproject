@@ -23,7 +23,7 @@
     "@angular/router": "~4.2.0",
     "del": "^3.0.0",
     "nativescript-angular": "~4.2.0",
-    "nativescript-aws-cognito": "file:///Users/aliyuksel/udemy/awsCognito/publish/package/nativescript-aws-cognito-1.0.0.tgz",
+    "nativescript-aws-cognito": "^1.0.7",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
     "rxjs": "~5.4.2",
