@@ -3,14 +3,15 @@ import { User } from "../.././models/user";
 import { RouterExtensions } from "nativescript-angular/router";
 import {Page} from "ui/page";
 import {MainComponent} from ".././main/main.component";
+import {AwsCognito, CognitoCommonDelegate} from "nativescript-aws-cognito";
 
 @Component({
     selector: "ns-login",
     templateUrl: "pages/login/login.component.html",
-    styleUrls: ["pages/login/login-common.css"]
+    styleUrls: ["pages/login/login-common.css", "pages/login/login.css"]
 })
 
-export class LoginComponent implements OnInit  {
+export class LoginComponent implements OnInit , CognitoCommonDelegate {
 
   
   user: User;
@@ -38,21 +39,18 @@ export class LoginComponent implements OnInit  {
         return;
       }
 
-      if(! MainComponent.userMap){
-        alert("User does not exists");
-        return;
-      }
-
-      var tmpUser:User = MainComponent.userMap.get(this.user.userName);
-      if(!tmpUser){
-        alert("User does not exists");
-        return; 
-      } else if (tmpUser.password != this.user.password){
-        alert("User's password does not correct");
-        return;        
-      }
+      AwsCognito.login(this.user.userName, this.user.password, this);
       
-      this.nav.navigate(["/main", tmpUser.userName]);
+      
+  }
+
+  onSuccess(result:any){
+    this.nav.backToPreviousPage();
+  }
+
+  onError(error:String){
+    console.log("onError");
+    alert(error);
   }
 
 }

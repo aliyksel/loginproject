@@ -7,10 +7,10 @@ import { SignupComponent } from "./pages/login/signup.component";
 import { MainComponent } from "./pages/main/main.component";
 
 export const routes: Routes = [
-    { path: "", redirectTo: "/login", pathMatch: "full" },
+    { path: "", redirectTo: "/main", pathMatch: "full" },
     { path: "login", component: LoginComponent },
     { path: "signup", component: SignupComponent },
-    { path: "main/:userName", component: MainComponent },
+    { path: "main", component: MainComponent },
 ];
 
 @NgModule({
